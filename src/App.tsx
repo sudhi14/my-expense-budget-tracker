@@ -1,9 +1,7 @@
+import MainLayout from "./pages/MainLayout.tsx";
+
 function App() {
-  return (
-    <>
-      <div>My Expense and Budget tracker</div>
-    </>
-  );
+  return <MainLayout />;
 }
 
 export default App;
