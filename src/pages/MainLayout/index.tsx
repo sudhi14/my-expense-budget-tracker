@@ -4,11 +4,11 @@ import { getRoutes } from "../../routes/routes";
 
 const MainLayout = () => {
   return (
-    <Row>
-      <Col xs={3}>
+    <Row >
+      <Col xs={2}>
         <GlobalSidebar />
       </Col>
-      <Col xs={9}>{getRoutes()}</Col>
+      <Col xs={10}>{getRoutes()}</Col>
     </Row>
   );
 };
