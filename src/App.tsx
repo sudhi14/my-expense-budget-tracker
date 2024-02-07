@@ -1,4 +1,4 @@
-import MainLayout from "./pages/MainLayout.tsx";
+import MainLayout from "./pages/MainLayout/index.tsx";
 
 function App() {
   return <MainLayout />;
