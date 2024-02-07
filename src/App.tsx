@@ -1,9 +1,9 @@
-import { Container } from "react-bootstrap";
 import MainLayout from "./pages/MainLayout/index.tsx";
+import { Container } from "@mui/material";
 
 function App() {
   return (
-    <Container fluid className="global-container">
+    <Container maxWidth="xl">
       <MainLayout />
     </Container>
   );

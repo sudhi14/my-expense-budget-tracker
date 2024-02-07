@@ -1,43 +1,42 @@
-import { Container, Nav, Navbar as NavbarBs, Stack } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import { Dashboard, AccountBalance, Settings, Logout } from "@mui/icons-material";
-import "./index.scss"
+import {
+  Dashboard,
+  AccountBalance,
+  Settings,
+  Logout,
+} from "@mui/icons-material";
+import { Stack } from "@mui/material";
+import * as Styles from "./index.styles";
 
 const GlobalSidebar = () => {
   return (
-    <NavbarBs className="bg-white shadow-sm rounded-top rounded-bottom test">
-      <Container>
-        <Nav className="flex-column">
-          <Stack direction="horizontal">
+    <Styles.SidebarContainer>
+      <Stack alignItems="center">
+        <Stack direction="column" spacing={2} gap={2}>
+          <Stack direction="row" spacing={2}>
             <Dashboard />
-            <Nav.Link to="/dashboard" as={NavLink}>
+            <Styles.SidebarNavLink to="/dashboard">
               Dashboard
-            </Nav.Link>
+            </Styles.SidebarNavLink>
           </Stack>
-          
-          <Stack direction="horizontal">
+
+          <Stack direction="row" spacing={2}>
             <AccountBalance />
-            <Nav.Link to="/finances" as={NavLink}>
-              Finances
-            </Nav.Link>
+            <NavLink to="/finances">Finances</NavLink>
           </Stack>
 
-          <Stack direction="horizontal">
+          <Stack direction="row" spacing={2}>
             <Settings />
-            <Nav.Link to="/settings" as={NavLink}>
-              Settings
-            </Nav.Link>
+            <NavLink to="/settings">Settings</NavLink>
           </Stack>
 
-          <Stack direction="horizontal">
+          <Stack direction="row" spacing={2}>
             <Logout />
-            <Nav.Link to="/logout" as={NavLink}>
-              Logout
-            </Nav.Link>
+            <NavLink to="/logout">Logout</NavLink>
           </Stack>
-        </Nav>
-      </Container>
-    </NavbarBs>
+        </Stack>
+      </Stack>
+    </Styles.SidebarContainer>
   );
 };
 

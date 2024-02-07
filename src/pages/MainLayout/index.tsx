@@ -1,15 +1,23 @@
-import { Row, Col } from "react-bootstrap";
+import { Container, Grid } from "@mui/material";
 import GlobalSidebar from "../../components/GlobalSidebar/index";
 import { getRoutes } from "../../routes/routes";
+import styled from "styled-components";
+
+const MainContent = styled.div`
+  margin-top: 30px;
+  margin-bottom: 30px;
+`;
 
 const MainLayout = () => {
   return (
-    <Row >
-      <Col xs={2}>
-        <GlobalSidebar />
-      </Col>
-      <Col xs={10}>{getRoutes()}</Col>
-    </Row>
+    <MainContent>
+      <Grid container columnGap={4}>
+        <Grid xs={2}>
+          <GlobalSidebar />
+        </Grid>
+        <Grid xs={8}>{getRoutes()}</Grid>
+      </Grid>
+    </MainContent>
   );
 };
 
