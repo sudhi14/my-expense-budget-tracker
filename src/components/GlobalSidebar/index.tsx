@@ -5,7 +5,7 @@ import {
   Settings,
   Logout,
 } from "@mui/icons-material";
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import * as Styles from "./index.styles";
 
 const GlobalSidebar = () => {

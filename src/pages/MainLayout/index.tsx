@@ -1,23 +1,22 @@
-import { Container, Grid } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import GlobalSidebar from "../../components/GlobalSidebar/index";
 import { getRoutes } from "../../routes/routes";
 import styled from "styled-components";
 
-const MainContent = styled.div`
-  margin-top: 30px;
-  margin-bottom: 30px;
-`;
-
 const MainLayout = () => {
   return (
-    <MainContent>
-      <Grid container columnGap={4}>
+    <Box>
+      <Grid
+        container
+        gap={2}
+        sx={{ marginTop: "25px", marginBottom: "25px"}}
+      >
         <Grid xs={2}>
           <GlobalSidebar />
         </Grid>
         <Grid xs={8}>{getRoutes()}</Grid>
       </Grid>
-    </MainContent>
+    </Box>
   );
 };
 
