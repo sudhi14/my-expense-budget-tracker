@@ -5,38 +5,22 @@ import {
   Settings,
   Logout,
 } from "@mui/icons-material";
-import { Box, Stack } from "@mui/material";
-import * as Styles from "./index.styles";
 
 const GlobalSidebar = () => {
   return (
-    <Styles.SidebarContainer>
-      <Stack alignItems="center">
-        <Stack direction="column" spacing={2} gap={2}>
-          <Stack direction="row" spacing={2}>
-            <Dashboard />
-            <Styles.SidebarNavLink to="/dashboard">
-              Dashboard
-            </Styles.SidebarNavLink>
-          </Stack>
+    <div>
+      <Dashboard />
+      <NavLink to="/dashboard">Dashboard</NavLink>
 
-          <Stack direction="row" spacing={2}>
-            <AccountBalance />
-            <NavLink to="/finances">Finances</NavLink>
-          </Stack>
+      <AccountBalance />
+      <NavLink to="/finances">Finances</NavLink>
 
-          <Stack direction="row" spacing={2}>
-            <Settings />
-            <NavLink to="/settings">Settings</NavLink>
-          </Stack>
+      <Settings />
+      <NavLink to="/settings">Settings</NavLink>
 
-          <Stack direction="row" spacing={2}>
-            <Logout />
-            <NavLink to="/logout">Logout</NavLink>
-          </Stack>
-        </Stack>
-      </Stack>
-    </Styles.SidebarContainer>
+      <Logout />
+      <NavLink to="/logout">Logout</NavLink>
+    </div>
   );
 };
 
