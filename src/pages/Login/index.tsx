@@ -1,6 +1,8 @@
 import LoginLogo from "../../assets/images/login/login-bg-image.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     // <div className="w-screen h-screen flex justify-center items-center">
     //   {/* The centered container for login page*/}
@@ -33,17 +35,63 @@ const Login = () => {
     //     <div className="h-3/4 w-1/4 bg-white"></div>
     //   </div>
     // </>
+    <>
+      <div
+        style={{ backgroundImage: `url(${LoginLogo})` }}
+        className="h-screen w-full bg-contain z-1"
+      ></div>
 
-    <header style={{ background: "black", overflow: "hidden" }}>
-      <img
-        src={LoginLogo}
-        alt=" Login logo"
-        style={{ objectFit: "cover", opacity: 0.4 }}
-      />
-      <section className="h-3/4 w-1/4 bg-white">
-        {/* <div className="h-3/4 w-1/4 bg-white">test</div> */}
-      </section>
-    </header>
+      <form action="">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center ">
+          <div className="p-10 bg-white rounded-2xl w-1/4 flex flex-col space-y-8">
+            <div>
+              <h1 className="text-4xl text-center font-bold tracking-tighter text-black mb-1">
+                Sign in
+              </h1>
+              <p className="text-center font-medium text-gray-400">
+                Sign in with your email here
+              </p>
+            </div>
+
+            <div className="flex flex-col justify-center items-center">
+              <input
+                type="text"
+                placeholder="Email"
+                className="h-10 w-full mb-5 rounded-lg px-3 outline-1 outline outline-gray-300  hover:outline-2"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                className="h-10 w-full mb-5 rounded-lg px-3 outline-1 outline outline-gray-300  hover:outline-2"
+              />
+              <input
+                type="submit"
+                value="Sign in"
+                className="h-10 w-full mb-5 rounded-lg px-3 bg-emerald-700 text-white cursor-pointer"
+                onClick={() => navigate("/dashboard")}
+              />
+            </div>n 
+
+            <hr className="border-b border-solid border-gray-200" />
+
+            <div className="text-sm">
+              <p className="text-center mb-2">
+                Forgot password?{" "}
+                <a href="" className="text-emerald-700">
+                  Reset
+                </a>
+              </p>
+              <p className="text-center">
+                Don't have an account?{" "}
+                <a href="" className="text-emerald-700">
+                  Signup
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </>
   );
 };
 

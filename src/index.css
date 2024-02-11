@@ -23,12 +23,9 @@ body {
   background-color: white
 }
 
+/* 
 @layer base {
-    a {
-      @apply no-underline
-    }
-
     html {
       @apply text-base
     } 
-  }
+  } */
