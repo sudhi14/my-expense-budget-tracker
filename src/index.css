@@ -2,9 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  appearance: 0;
+  color: rgb(40, 40, 40);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  background-color: white
+}
+
 @layer base {
-    body {
-     font-family: 'Poppins', sans-serif;
-     background-color: yellow;
+    a {
+      @apply no-underline
     }
+
+    html {
+      @apply text-base
+    } 
   }
