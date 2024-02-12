@@ -36,14 +36,23 @@ const Login = () => {
     //   </div>
     // </>
     <>
-      <div
-        style={{ backgroundImage: `url(${LoginLogo})` }}
-        className="h-screen w-full bg-contain z-1"
-      ></div>
+      <div className="flex flex-row h-screen w-full">
+        <div
+          style={{ backgroundImage: `url(${LoginLogo})` }}
+          className=" flex-1 h-screen bg-cover bg-no-repeat"
+        ></div>
+        <div className="bg-[#f7ebcb] flex-1 h-screen">
+          <div className="flex flex-col w-full h-full items-center justify-center">
+            <p className="text-emerald-800 text-8xl font-bold -translate-x-14 mb-3">My</p>
+            <p className="text-emerald-800 text-8xl font-bold translate-x-24 mb-3">expense</p>
+            <p className="text-emerald-800 text-8xl font-bold translate-x-36">tracker!</p>
+          </div>
+        </div>
+      </div>
 
       <form action="">
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center ">
-          <div className="p-10 bg-white rounded-2xl w-1/4 flex flex-col space-y-8">
+          <div className="p-10 bg-white rounded-2xl w-1/4 flex flex-col space-y-8 lg:w-[30%] md:w-1/2 sm:w-full">
             <div>
               <h1 className="text-4xl text-center font-bold tracking-tighter text-black mb-1">
                 Sign in
@@ -70,7 +79,7 @@ const Login = () => {
                 className="h-10 w-full mb-5 rounded-lg px-3 bg-emerald-700 text-white cursor-pointer"
                 onClick={() => navigate("/dashboard")}
               />
-            </div>n 
+            </div>
 
             <hr className="border-b border-solid border-gray-200" />
 
