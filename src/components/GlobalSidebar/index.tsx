@@ -8,18 +8,18 @@ import {
 
 const GlobalSidebar = () => {
   return (
-    <div>
+    <div className="flex flex-col w-1/5 bg-emerald-800 text-white">
       <Dashboard />
-      <NavLink to="/dashboard">Dashboard</NavLink>
+      <NavLink to="/home/dashboard">Dashboard</NavLink>
 
       <AccountBalance />
-      <NavLink to="/finances">Finances</NavLink>
+      <NavLink to="/home/finances">Finances</NavLink>
 
       <Settings />
-      <NavLink to="/settings">Settings</NavLink>
+      <NavLink to="/home/settings">Settings</NavLink>
 
       <Logout />
-      <NavLink to="/logout">Logout</NavLink>
+      <NavLink to="/">Logout</NavLink>
     </div>
   );
 };

@@ -52,7 +52,7 @@ const Login = () => {
 
       <form action="">
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center ">
-          <div className="p-10 bg-white rounded-2xl w-1/4 flex flex-col space-y-8 lg:w-[30%] md:w-1/2 sm:w-full">
+          <div className="p-10 bg-white rounded-2xl xl:w-1/4 flex flex-col space-y-8 lg:w-[30%] md:w-1/2 sm:w-full">
             <div>
               <h1 className="text-4xl text-center font-bold tracking-tighter text-black mb-1">
                 Sign in
@@ -77,7 +77,7 @@ const Login = () => {
                 type="submit"
                 value="Sign in"
                 className="h-10 w-full mb-5 rounded-lg px-3 bg-emerald-700 text-white cursor-pointer"
-                onClick={() => navigate("/dashboard")}
+                onClick={() => navigate("/home")}
               />
             </div>
 
