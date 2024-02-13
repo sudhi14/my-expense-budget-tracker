@@ -13,7 +13,7 @@
   border: 0;
   outline: 0;
   appearance: 0;
-  color: rgb(40, 40, 40);
+ 
 }
 
 body {
@@ -21,12 +21,13 @@ body {
   height: 100vh;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
-  background-color: white
+  background-color: white;
+  color: rgb(40, 40, 40);
 }
 
-/* 
+
 @layer base {
     html {
       @apply text-base
     } 
-  } */
+  }
