@@ -29,15 +29,7 @@ const GlobalSidebar = () => {
   ];
 
   return (
-    <div className="fixed flex flex-col w-64 h-screen shadow-lg">
-      <header className="flex flex-row gap-5 w-full items-end justify-center mt-5">
-        <img src={ExpenseTrackerLogo} alt="Expense Logo" className="h-12" />
-        <div className="font-bold text-xl text-gray-500">My expense</div>
-      </header>
-
-      {/* <hr className="border-b-2 border-solid border-[#f8b326] mt-5" /> */}
-      <hr className="border-b border-solid border-gray-200 mt-5 ml-2 mr-2 rounded-lg" />
-
+    <div className="fixed flex flex-col w-64 h-screen shadow-lg bg-white">
       <section className="flex flex-col justify-center items-center h-screen w-full py-10">
         {navItems.map((curr) => (
           <GlobalSidebarItems {...curr} />

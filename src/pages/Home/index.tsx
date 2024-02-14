@@ -16,11 +16,9 @@ const Home = () => {
   return (
     <>
       {auth ? (
-        <div className="bg-[#e6e6e6] flex flex-col justify-center items-center w-full h-screen">
-          <div className="flex flex-row bg-white w-full h-full m-2 rounded-lg">
-            <GlobalSidebar />
-            <Outlet />
-          </div>
+        <div className="flex flex-row bg-[#f1f1f1] w-full h-screen">
+          <GlobalSidebar />
+          <Outlet />
         </div>
       ) : null}
     </>
