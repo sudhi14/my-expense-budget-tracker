@@ -3,8 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily:{
-        Poppins : ['Poppins']
+      fontFamily: {
+        poppins: ['Poppins']
+      },
+      colors: {
+        secondaryOrange: '#f8b326'
       }
     },
   },

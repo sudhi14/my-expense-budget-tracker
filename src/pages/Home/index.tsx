@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
       {auth ? (
-        <div className="flex flex-row bg-[#f1f1f1] w-full h-screen">
+        <div className="flex flex-row bg-whites w-full h-screen">
           <GlobalSidebar />
           <Outlet />
         </div>

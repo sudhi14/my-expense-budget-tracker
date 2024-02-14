@@ -1,19 +1,20 @@
-import { IconContext } from "react-icons";
-import { MdOutlineLogout, MdOutlineSpaceDashboard } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 const GlobalSidebarItems = (curr) => {
   return (
     <div
-      className={`hover:rounded-r-md flex flex-row gap-5 w-full mb-5 hover:cursor-pointer group hover:bg-emerald-600`}
+      className={`group hover:bg-gray-100 hover:rounded-2xl hover:cursor-pointer py-2 px-2 ${curr.title === "Logout" ? "mt-auto" : ""}`}
     >
-      <div className="w-2 bg-emerald-800 scale-0 group-hover:scale-100 delay-100 ease-in-out duration-300"></div>
-
-      <div className="group-hover:text-white">{curr.icon}</div>
-
-      <NavLink to={curr.link} className="w-20 group-hover:text-white">
-        {curr.title}
-      </NavLink>
+      <header></header>
+      <section className="flex flex-row gap-5 items-center">
+        <div className="group-hover:text-white group-hover:bg-secondaryOrange text-gray-500 p-2 bg-gray-100 rounded-2xl">{curr.icon}</div>
+        <NavLink
+          to={curr.link}
+          className="w-20 group-hover:text-gray-800 text-gray-500 text-bold"
+        >
+          {curr.title}
+        </NavLink>
+      </section>
     </div>
   );
 };
