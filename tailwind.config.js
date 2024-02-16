@@ -4,10 +4,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins']
+        poppins: ['Roboto']
       },
       colors: {
-        secondaryOrange: '#f8b326'
+        customGrayHighlight: 'rgba(245,245,245,255)',
+        customGrayFont: 'rgba(163,163,163,255)',
+        customOrange: 'rgba(248,179,38,255)',
+
       }
     },
   },

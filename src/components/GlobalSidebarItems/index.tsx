@@ -1,16 +1,20 @@
 import { NavLink } from "react-router-dom";
 
-const GlobalSidebarItems = (curr) => {
+const GlobalSidebarItems = (curr, location) => {
+  console.log("location", location);
   return (
     <div
-      className={`group hover:bg-gray-100 hover:rounded-2xl hover:cursor-pointer py-2 px-2 ${curr.title === "Logout" ? "mt-auto" : ""}`}
+      className={`group ${curr.title === "Dark mode" ? "bg-customGrayHighlight rounded-xl" : "hover:bg-customGrayHighlight hover:rounded-xl"} cursor-pointer py-1 px-1`}
     >
-      <header></header>
       <section className="flex flex-row gap-5 items-center">
-        <div className="group-hover:text-white group-hover:bg-secondaryOrange text-gray-500 p-2 bg-gray-100 rounded-2xl">{curr.icon}</div>
+        <div
+          className={`${curr.title === "Dark mode" ? "text-white bg-gray-900" : "group-hover:text-white group-hover:bg-customOrange"} text-customGrayFont p-2 bg-GrayHighlight rounded-xl`}
+        >
+          {curr.icon}
+        </div>
         <NavLink
           to={curr.link}
-          className="w-20 group-hover:text-gray-800 text-gray-500 text-bold"
+          className="group-hover:text-gray-700 text-customGrayFont text-bold"
         >
           {curr.title}
         </NavLink>
