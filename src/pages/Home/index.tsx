@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import GlobalSidebar from "../../components/GlobalSidebar/index";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import GlobalSidebar from "../../components/customComponents/GlobalSidebar";
 
 const Home = () => {
   const auth = true;

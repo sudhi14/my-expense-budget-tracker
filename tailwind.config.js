@@ -7,11 +7,10 @@ export default {
         poppins: ['Roboto']
       },
       colors: {
-        customGrayHighlight: 'rgba(245,245,245,255)',
-        customGrayFont: 'rgba(163,163,163,255)',
-        customOrange: 'rgba(248,179,38,255)',
         customOffWhite: 'rgb(250, 249, 246)',
-        customFontColor: 'rgb(37,37,37)'
+        customFontColor: 'rgb(211,211,211)',
+        customBgAccents: 'rgb(75,0,130)',
+        customComponents : 'rgb(255,69,0)'
 
       }
     },
