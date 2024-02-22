@@ -20,18 +20,15 @@
   font-weight: 500;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  color: rgb(40, 40, 40);
-  
-}
-
-
 @layer base {
     html {
       @apply text-base;
-
+    }
+    
+    body {
+      @apply h-screen;
+      @apply h-full;
+      @apply overflow-hidden;
+      @apply text-customFontColor;
     }
   } 

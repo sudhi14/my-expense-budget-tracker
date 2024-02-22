@@ -36,16 +36,18 @@ const Login = () => {
     //   </div>
     // </>
     <>
-      <div className="flex flex-row h-screen w-full">
+      <div className="w-full flex flex-row h-screen">
         <div
           style={{ backgroundImage: `url(${LoginLogo})` }}
           className=" flex-1 h-screen bg-cover bg-no-repeat"
         ></div>
-        <div className="bg-[#f7ebcb] flex-1 h-screen">
-          <div className="flex flex-col w-full h-full items-center justify-center">
-            <p className="text-emerald-800 text-8xl font-bold -translate-x-14 mb-3">My</p>
-            <p className="text-emerald-800 text-8xl font-bold translate-x-24 mb-3">expense</p>
-            <p className="text-emerald-800 text-8xl font-bold translate-x-36">tracker!</p>
+        <div className="flex-1 bg-[#f7ebcb]  h-screen">
+          <div className="flex flex-col w-full h-full items-end justify-center">
+            <p className="text-emerald-800 text-8xl font-bold">CoinCraze</p>
+            <p className="text-emerald-800 text-sm font-bold -translate-x-4">
+              The simplest way to track your expenses
+            </p>
+            {/* <p className="text-emerald-800 text-8xl font-bold translate-x-36">tracker!</p> */}
           </div>
         </div>
       </div>
