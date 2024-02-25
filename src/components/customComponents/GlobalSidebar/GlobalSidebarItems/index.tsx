@@ -6,10 +6,10 @@ const GlobalSidebarItems = (curr: {
   icon: string;
 }) => {
   return (
-    <div>
+    <div className="p-2 rounded-xl bg-customBgAccents text-white">
       <section className="flex flex-row gap-5 items-center">
-        <div className={`p-2`}>{curr.icon}</div>
-        <NavLink to={curr.link}>{curr.title}</NavLink>
+        {/* <div className={`p-2`}>{curr.icon}</div> */}
+        <NavLink to={curr.link}>{curr.icon}</NavLink>
       </section>
     </div>
   );
