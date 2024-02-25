@@ -43,7 +43,7 @@ const GlobalSidebar = () => {
   console.log(location);
 
   return (
-    <div className="inset-0 flex flex-col w-64 h-full shadow-lg  bg-customBgAccentss">
+    <div className="inset-0 flex flex-col w-64 h-full shadow-lg">
       {/* <header className="flex flex-row gap gap-5 items-center py-1 px-1 mb-10 mt-5 ml-3">
         <GlobalSidebarHeader />
       </header> */}

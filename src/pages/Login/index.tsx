@@ -8,7 +8,7 @@ const Login = () => {
   return (
     <>
       {/* Background for login page */}
-      <div className="w-full flex flex-row h-screen">
+      {/* <div className="w-full flex flex-row h-screen">
         <div
           style={{ backgroundImage: `url(${LoginLogo})` }}
           className=" flex-1 h-screen bg-cover bg-no-repeat"
@@ -21,7 +21,9 @@ const Login = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <div className="bg-customBgAccents h-screen"></div>
 
       {/* Form to get username and password */}
       <form action="">
@@ -32,20 +34,27 @@ const Login = () => {
                 Sign in
               </h1>
 
-              <p className="text-center font-medium text-gray-400">
-                Sign in with your email here
-              </p>
+              <p className="text-center">Sign in with your email here</p>
             </div>
 
             <div className="flex flex-col justify-center items-center">
-              <TextBox type="text" placeholder="Email" />
+              <TextBox
+                type="text"
+                placeholder="Email"
+                additionalClassName="focus:outline-customBgAccents focus:outline-2"
+              />
 
-              <TextBox type="password" placeholder="Password" />
+              <TextBox
+                type="password"
+                placeholder="Password"
+                additionalClassName="focus:outline-customBgAccents focus:outline-2"
+              />
 
               <Buttons
                 type="submit"
                 value="Sign in"
                 handleClick={() => navigate("/home")}
+                additionalClassName="hover:bg-customComponentsFocus"
               />
             </div>
 
@@ -54,14 +63,14 @@ const Login = () => {
             <div className="text-sm">
               <p className="text-center mb-2">
                 Forgot password?{" "}
-                <a href="" className="text-emerald-700">
+                <a href="" className="text-customBgAccents">
                   Reset
                 </a>
               </p>
 
               <p className="text-center">
                 Don't have an account?{" "}
-                <a href="" className="text-emerald-700">
+                <a href="" className="text-customBgAccents">
                   Signup
                 </a>
               </p>

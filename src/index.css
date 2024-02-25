@@ -17,7 +17,7 @@
   border: 0;
   outline: 0;
   appearance: 0;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @layer base {
@@ -29,6 +29,6 @@
       @apply h-screen;
       @apply h-full;
       @apply overflow-hidden;
-      @apply text-customFontColor;
+      @apply text-gray-700;
     }
   } 
