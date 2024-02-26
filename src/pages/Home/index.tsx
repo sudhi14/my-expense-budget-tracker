@@ -11,6 +11,8 @@ const Home = () => {
   useEffect(() => {
     if (!auth) {
       navigate("/login");
+    } else {
+      navigate("dashboard");
     }
   }, [auth]);
 
