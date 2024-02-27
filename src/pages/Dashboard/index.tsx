@@ -3,12 +3,12 @@ import Card from "../../components/interactiveComponents/Card";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-row w-full gap-10">
+    <div className="flex flex-row w-full gap-5">
       <div className="flex flex-col h-96 flex-1 gap-5">
-        <div className="flex flex-row place-content-between">
-          <Card additionalClass={"flex-none h-36 w-60 bg-white"}>test</Card>
-          <Card additionalClass={"flex-none h-36 w-60 bg-white"}>test</Card>
-          <Card additionalClass={"flex-none h-36 w-60 bg-white"}>test</Card>
+        <div className="flex flex-row gap-4">
+          <Card additionalClass={"flex-none h-36 w-64 bg-white"}>test</Card>
+          <Card additionalClass={"flex-none h-36 w-64 bg-white"}>test</Card>
+          <Card additionalClass={"flex-none h-36 w-64 bg-white"}>test</Card>
         </div>
         <div className=" flex flex-1 flex-row gap-4">
           <Card additionalClass={"h-64 w-1/2 bg-white"}>test</Card>

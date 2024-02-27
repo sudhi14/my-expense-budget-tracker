@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       {auth ? (
-        <div className="flex flex-col w-[98%] h-screen">
+        <div className="flex flex-col w-full h-screen pr-5">
           <GlobalHeader />
           <div className="flex flex-row w-full h-screen gap-10 mt-2">
             <GlobalSidebar />
