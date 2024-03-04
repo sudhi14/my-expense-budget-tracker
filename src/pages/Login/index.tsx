@@ -2,8 +2,37 @@ import LoginLogo from "../../assets/images/login/login-bg-image.jpg";
 import { useNavigate } from "react-router-dom";
 import TextBox from "../../components/interactiveComponents/TextBox";
 import Buttons from "../../components/interactiveComponents/Buttons";
+import { useState, useEffect } from "react";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [isError, setIsError] = useState("");
+
+  const handleLogin = async (e: any) => {
+    e.preventDefault();
+    if (username && password) {
+      const response = await fetch(
+        `http://localhost:5000/login?email_id=${username}&password=${password}`,
+        {
+          method: "GET",
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json; charset=utf-8",
+          },
+          // mode: "no-cors",
+        }
+      );
+
+      const responseJSON = await response.json();
+      if (responseJSON?.entry?.isAuth) {
+        navigate("/home/dashboard");
+      } else if (!responseJSON?.entry?.isAuth) {
+        setIsError("Username or password not correct");
+      }
+    }
+  };
+
   const navigate = useNavigate();
   return (
     <>
@@ -42,20 +71,29 @@ const Login = () => {
                 type="text"
                 placeholder="Email"
                 additionalClassName="focus:outline-customBgAccents focus:outline-2"
+                onChange={(e: any) => {
+                  setUsername(e.target.value);
+                  setIsError("");
+                }}
               />
 
               <TextBox
                 type="password"
                 placeholder="Password"
                 additionalClassName="focus:outline-customBgAccents focus:outline-2"
+                onChange={(e: any) => {
+                  setPassword(e.target.value);
+                  setIsError("");
+                }}
               />
 
               <Buttons
                 type="submit"
                 value="Sign in"
-                handleClick={() => navigate("/home")}
+                onClick={(e) => handleLogin(e)}
                 additionalClassName="hover:bg-customComponentsFocus"
               />
+              {isError && <p className="text-red-800 text-sm">{isError}</p>}
             </div>
 
             <hr className="border-b border-solid border-gray-200" />
